@@ -1,0 +1,32 @@
+{
+  "index": 537,
+  "phase": 2,
+  "batch": 60,
+  "name": "prism-ops-schedule-guard",
+  "planned_name": "prism-ops-schedule-guard",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for schedule scenarios with log and snapshot fixtures, replay consistency checks, and single-node deterministic mode.",
+  "repository_url": "https://github.com/ZachL111/prism-ops-schedule-guard",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 167,
+    "risk_penalty": 6,
+    "latency_penalty": 4,
+    "weight_bonus": 4,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
