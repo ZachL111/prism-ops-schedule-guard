@@ -1,0 +1,28 @@
+{
+  "repo": "prism-ops-schedule-guard",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for schedule scenarios with log and snapshot fixtures, replay consistency checks, and single-node deterministic mode.",
+  "weights": {
+    "signal": 3,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 3
+  },
+  "thresholds": {
+    "ship": 159,
+    "watch": 111
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
